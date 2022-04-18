@@ -16,6 +16,15 @@
        flex-wrap: wrap;
        padding: 20px;
  }
+ .login a{
+   color: white;
+   font-family:'Noto Sans SC', sans-serif;
+   margin-left: 1000px;
+   text-decoration: none;
+ }
+ .login a:hover {
+  font-weight: 900;
+}
   .card {
        max-width: 340px;
        margin: auto;

@@ -10,10 +10,10 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :description, length: { maximum: 140 }
-  validates :facebook, uniqueness: true
-  validates :instagram, uniqueness: true
-  validates :twitter, uniqueness: true
-  validates :linkedin, uniqueness: true
-  validates :phone_number, uniqueness: true
-  validates :job_title, presence: true, length: { maximum: 40}
+  # validates :facebook, uniqueness: true
+  # validates :instagram, uniqueness: true
+  # validates :twitter, uniqueness: true
+  # validates :linkedin, uniqueness: true
+  # validates :phone_number, uniqueness: true
+  validates :job_title, length: { maximum: 40 }
 end

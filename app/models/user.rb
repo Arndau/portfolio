@@ -15,5 +15,5 @@ class User < ApplicationRecord
   validates :twitter, uniqueness: true
   validates :linkedin, uniqueness: true
   validates :phone_number, uniqueness: true
-  validates :job_title, presence: true, length { maximum: 40}
+  validates :job_title, presence: true, length: { maximum: 40}
 end

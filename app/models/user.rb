@@ -13,5 +13,5 @@ class User < ApplicationRecord
   validates :instagram, uniqueness: true
   validates :twitter, uniqueness: true
   validates :linkedin, uniqueness: true
-
+  validates :phone_number, uniqueness: true
 end

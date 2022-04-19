@@ -19,7 +19,6 @@
  .login a{
    color: white;
    font-family:'Noto Sans SC', sans-serif;
-   text-align: right;
    margin-left: 975px;
    text-decoration: none;
  }
@@ -215,6 +214,10 @@
        font-weight: 500;
        outline: 0;
        border-bottom: 3px solid transparent;
+ }
+  .card-buttons a{
+      text-decoration: none;
+      color:#5c5c6d ;
  }
   .card-buttons button.is-active, .card-buttons button:hover {
        color: #2b2c48;

@@ -81,10 +81,10 @@
         </div>
       </div>
       <div class="card-buttons">
-        <%=link_to "PROJECTS", projects_path do%>
-        <button data-section="#experience"><%=link_to "PROJECTS", projects_path</button> %>
+        <%=link_to "PROJECTS", user_projects_path do%>
+        <button data-section="#experience"></button>
         <% end %>
-        <%= link_to "CONTACT", "https://www.linkedin.com/in/arnaud-le-garrec-3260a317b/", :target => "_blank" do%>
+        <%= link_to "CONTACT", user_path do%>
         <button data-section="#contact"></button>
         <% end %>
       </div>

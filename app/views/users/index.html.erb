@@ -5,6 +5,7 @@
   <%=link_to "登录", new_user_session_path%>
 <% end %>
 </div>
+<%=link_to "INDEX", users_path%>
 <%= @users.each do |user| %>
   <div class="card" data-state="#about">
     <div class="card-header">
@@ -82,11 +83,11 @@
       </div>
     </div>
     <div class="card-buttons">
-      <%=link_to "PROJECTS",  userprojects_projects_path do%>
-      <button data-section="#experience"></button>
+      <%=link_to userprojects_projects_path do%>
+        <button data-section="#experience"></button>
       <% end %>
-      <%= link_to "CONTACT", user_path do%>
-      <button data-section="#contact"></button>
+      <%= link_to "CONTACT", @user_path do%>
+        <button data-section="#contact"></button>
       <% end %>
     </div>
     </div>

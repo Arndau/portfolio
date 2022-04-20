@@ -1,16 +1,13 @@
 class ProjectsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :index, :show ]
+  skip_before_action :authenticate_user!, only: [ :index, :show, :userprojects ]
 
   def index
     @projects = Project.all
   end
 
   def userprojects
-    # @userprojects = @projects.where(user.id == @user.id)
     @projects = Project.all
-    # @userprojects = @projects.where(user_id: @user.id)
-    # @userprojects = Project.find(params[:id])
-    @userprojects = @projects.where(user: @user)
+    @userprojects = @projects.where(user_id: @user)
   end
 
   def show
@@ -22,9 +19,10 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Restaurant.new(params[:restaurant])
-    @project.save
-    redirect_to project_path(@project)
+    @project = Project.new(project_params)
+    @project.user=current_user
+    @project.save!
+    redirect_to userprojects_projects_path
   end
 
   def edit

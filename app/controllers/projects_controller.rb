@@ -6,8 +6,9 @@ class ProjectsController < ApplicationController
   end
 
   def userprojects
+    @user = User.all
     @projects = Project.all
-    @userprojects = @projects.where(user_id: @user)
+    @userprojects = @projects.where(user: @user)
   end
 
   def show

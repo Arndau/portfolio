@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <h1 class="header">报名</h1>
+  <p class="headerText">Sign up</p>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-inputs">
+    <%= f.input :first_name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "first name" }%>
+    <%= f.input :last_name,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "last name" }%>
+    <%= f.input :job_title,
+                required: true,
+                autofocus: true %>
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" }%>
+    <%= f.input :password,
+                required: true,
+                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                input_html: { autocomplete: "new-password" } %>
+    <%= f.input :password_confirmation,
+                required: true,
+                input_html: { autocomplete: "new-password" } %>
+  </div>
+
+   <div class="form-actions">
+      <%= f.button :submit, "SIGN UP (报名)", class:"submitButton" %>
+     </div>
+   <% end %>
+  <%= render "devise/shared/links" %>
+
+</div>

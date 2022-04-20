@@ -26,8 +26,10 @@
   font-weight: 900;
 }
   .card {
-       max-width: 340px;
+       max-width: 390px;
        margin: auto;
+       margin-top: 160px;
+       margin-bottom: 60px;
        overflow-y: auto;
        position: relative;
        z-index: 1;
@@ -104,8 +106,8 @@
        transition: 0.5s;
  }
   .card-avatar {
-       width: 100px;
-       height: 100px;
+       width: 130px;
+       height: 130px;
        box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
        border-radius: 50%;
        object-position: center;
@@ -207,6 +209,7 @@
        font-size: 13px;
        border: 0;
        padding: 15px 5px;
+       width: 200px;
        cursor: pointer;
        color: #5c5c6d;
        transition: 0.3s;

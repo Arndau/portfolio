@@ -5,6 +5,14 @@ class ProjectsController < ApplicationController
     @projects = Project.all
   end
 
+  def userprojects
+    # @userprojects = @projects.where(user.id == @user.id)
+    @projects = Project.all
+    # @userprojects = @projects.where(user_id: @user.id)
+    # @userprojects = Project.find(params[:id])
+    @userprojects = @projects.where(user: @user)
+  end
+
   def show
     @project = Project.find(params[:id])
   end
@@ -38,6 +46,6 @@ class ProjectsController < ApplicationController
     private
 
     def project_params
-      params.require(:project).permit(:name, :type, :description, :date_of_publication, :used_techno, :link)
+      params.require(:project).permit(:name, :type, :description, :date_of_publication, :used_techno, :link, :user_id)
     end
 end

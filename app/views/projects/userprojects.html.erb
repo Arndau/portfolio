@@ -1,14 +1,22 @@
- <%= @userprojects.each do |project| %>
-  <div class="card" data-state="#about">
-    <div class="card-header">
-      <div class="card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
-      <h1 class="card-fullname"><%=project.name%></h1>
-      <h2 class="card-jobtitle"><%=project.description%></h2>
-      <h3 class="card-type"><%=project.type %></h3>
-      <div class="card-linktoproject">
-        <%= link_to "#" "external link"%>
+<div class = "projects-card-container">
+  <%= @userprojects.each do |project| %>
+    <div class="projects-card" data-state="#about">
+      <div class="projects-card-header" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')">
+        <%# <div class="projects-card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div> %>
+      </div>
+        <div class="projects-card-header-content">
+          <h1><%=project.name%></h1>
+          <%= link_to "#" "external link"%>
+        </div>
+        <div class="projects-card-main">
+          <div class="projects-card-content">
+            <div class="projects-card-subtitle">ABOUT</div>
+              <p class="projects-card-desc">l,lqms,cklJBQSCHJQBCNQS CNB BQS CBNQSVCBQSVCNB QSNBC QSN BC,NQB CNBQDVDQBV,NDQBV ,NQDBVNQDBVNQDBV;NQDBVN,QD VCNQD CNQDB CNBDKVDGFKEAJHFKJDHVKZGFHZGFKJDBVKHBCJDBJVKEHJFKGZHJFVDKBCJKDBFKJBQDJVBKHV<%=project.description%>
+              </p>
+              <%=project.type %>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
  </div>
- <% end %>

@@ -2,7 +2,7 @@
   <div class="row d-flex justify-content-around">
     <%= @projects.each do |project| %>
       <div class="col-lg-4 col-sm-6">
-      <div class="card-1">
+      <%= cl_image_tag project.photo.key crop: :fill %>
         <%# <div class="card-1_image"> <img src="" /> </div> %>
         <%# ../app/assets/images/cyberpunk-city-buildings-art.jpeg %>
         <div class="card-1-content">

@@ -2,7 +2,7 @@
   <div class="row d-flex justify-content-around">
     <%= @projects.each do |project| %>
       <div class="col-lg-4 col-sm-6">
-      <%= cl_image_tag("pgoiimwxuzpwmhl0y22g") %>
+      <%= cl_image_tag project.project_image %>
       <%# <%= cl_image_tag project.image.project_image crop: :fill %> %>
         <%# <div class="card-1_image"> <img src="" /> </div> %>
         <%# ../app/assets/images/cyberpunk-city-buildings-art.jpeg %>

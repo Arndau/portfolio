@@ -1,22 +1,14 @@
-<div class = "projects-card-container">
-  <%= @userprojects.each do |project| %>
-    <div class="projects-card" data-state="#about">
-      <div class="projects-card-header" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')">
-        <%# <div class="projects-card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div> %>
-      </div>
-        <div class="projects-card-header-content">
-          <h1><%=project.name%></h1>
-          <%= link_to "#" "external link"%>
-        </div>
-        <div class="projects-card-main">
-          <div class="projects-card-content">
-            <div class="projects-card-subtitle">ABOUT</div>
-              <p class="projects-card-desc">l,lqms,cklJBQSCHJQBCNQS CNB BQS CBNQSVCBQSVCNB QSNBC QSN BC,NQB CNBQDVDQBV,NDQBV ,NQDBVNQDBVNQDBV;NQDBVN,QD VCNQD CNQDB CNBDKVDGFKEAJHFKJDHVKZGFHZGFKJDBVKHBCJDBJVKEHJFKGZHJFVDKBCJKDBFKJBQDJVBKHV<%=project.description%>
-              </p>
-              <%=project.type %>
-          </div>
+ <div class="projects-container">
+  <div class="row d-flex justify-content-around">
+    <%= @projects.each do |project| %>
+      <div class="col-lg-4 col-sm-6">
+      <div class="card-1">
+        <div class="card-1_image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
+        <div class="card-1_title title-white">
+          <p>Card Title</p>
         </div>
       </div>
-    </div>
-  <% end %>
- </div>
+      </div>
+    <% end %>
+  </div>
+</div>

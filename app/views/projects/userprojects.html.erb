@@ -3,10 +3,14 @@
     <%= @projects.each do |project| %>
       <div class="col-lg-4 col-sm-6">
       <div class="card-1">
-        <div class="card-1_image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
-        <div class="card-1_title title-white">
-          <p>Card Title</p>
+        <%# <div class="card-1_image"> <img src="" /> </div> %>
+        <%# ../app/assets/images/cyberpunk-city-buildings-art.jpeg %>
+        <div class="card-1-content">
+        <h1><%=project.name%></h1>
+        <h3>See website</h3>
+          <p class="project-description"><%=project.description%></p>
         </div>
+        <p class="project-used_techno"><%="used_techno"%></p>
       </div>
       </div>
     <% end %>

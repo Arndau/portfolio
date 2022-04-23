@@ -29,6 +29,8 @@
 //   background-color: rgba(248, 248, 248, 0.7);
 // }
 .card-1 h1{
+  position: absolute;
+  bottom: 225px;
   text-align: center;
   border-radius: 0px 0px 40px 40px;
   font-family: sans-serif;
@@ -36,6 +38,8 @@
   font-size: 30px;
 }
 .card-1 h3{
+  position: absolute;
+  bottom: 160px;
   text-align: center;
   border-radius: 0px 0px 40px 40px;
   font-family: sans-serif;
@@ -43,15 +47,14 @@
   font-size: 30px;
 }
 .card-1 .project-description {
-  /* text-align: center; */
-  /* border-radius: 0px 0px 40px 40px; */
+  position: absolute;
+  bottom: 70px;
   font-family: sans-serif;
-  /* font-weight: bold; */
   font-size: 18px;
 }
 .bubles{
   position: absolute;
-  bottom: 0px;
+  bottom: -10px;
 }
 .project-type{
   background-color: white;

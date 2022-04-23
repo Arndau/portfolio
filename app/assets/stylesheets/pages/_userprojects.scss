@@ -29,16 +29,17 @@
 //   background-color: rgba(248, 248, 248, 0.7);
 // }
 .card-1 h1{
-  position: absolute;
+  margin-top: -85%;
   bottom: 225px;
   text-align: center;
   border-radius: 0px 0px 40px 40px;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 30px;
+  position: sticky;
 }
 .card-1 h3{
-  position: absolute;
+  position: sticky;
   bottom: 160px;
   text-align: center;
   border-radius: 0px 0px 40px 40px;

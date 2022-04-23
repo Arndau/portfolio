@@ -2,17 +2,15 @@
   <div class="row d-flex justify-content-around">
     <%= @projects.each do |project| %>
       <div class="col-lg-4 col-sm-6">
-      <%# <%= cl_image_tag project.image.project_image crop: :fill %> %>
-        <%# <div class="card-1_image"> <img src="" /> </div> %>
-        <%# ../app/assets/images/cyberpunk-city-buildings-art.jpeg %>
-        <div class="card-1-content">
-          <%= cl_image_tag project.project_image %>
+        <div class="card-1">
+          <%# <%= cl_image_tag project.project_image %>
           <h1><%=project.name%></h1>
           <h3><%=link_to "SEE WEBSITE", "https://www.poner.io/", :target => "_blank" %></h3>
-            <p class="project-description"><%=project.description%></p>
+          <p class="project-description"><%=project.description%></p>
+          <div class="bubles">
+            <p class="project-type"><%= "project type"%></p>
+            <p class="project-used_techno"><%="used_techno"%></p>
           </div>
-          <p class="project-type"><%= "project type"%></p>
-          <p class="project-used_techno"><%="used_techno"%></p>
         </div>
       </div>
     <% end %>

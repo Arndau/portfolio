@@ -2,13 +2,9 @@ class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show, :userprojects ]
 
   def index
-    @projects = Project.all
-  end
+    @user_selected = params[:user_id].to_i
 
-  def userprojects
-    @user = User.all
-    @projects = Project.all
-    @userprojects = @projects.where(user: @user)
+    @projects = Project.where(user: @user_selected)
   end
 
   def show
@@ -22,6 +18,8 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     @project.user=current_user
+    @project_type_values = projecttype(params["project"]["project_type"])
+    @project.project_type = @project_type_values
     @project.save!
     redirect_to userprojects_projects_path
   end
@@ -43,6 +41,11 @@ class ProjectsController < ApplicationController
   end
 
     private
+
+  def projecttype(project_type_values)
+    resultat = project_type_values.join(",")
+    resultat[1..-1]
+  end
 
     def project_params
       params.require(:project).permit(:name, :project_type, :description, :date_of_publication, :used_techno, :link, :user_id, :image)

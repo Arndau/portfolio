@@ -14,7 +14,10 @@
             <%= @skills.each do |skill|%>
               <p class="project-type"><%=skill%></p>
             <% end %>
-            <p class="project-used_techno"><%="used_techno"%></p>
+            <% @technos = project.used_techno.split(",")%>
+            <%= @technos.each do |techno|%>
+              <p class="project-used_techno"><%=techno%></p>
+            <% end %>
           </div>
         </div>
       </div>

@@ -20,6 +20,8 @@ class ProjectsController < ApplicationController
     @project.user=current_user
     @project_type_values = projecttype(params["project"]["project_type"])
     @project.project_type = @project_type_values
+    @used_techno_values = usedtechno(params["project"]["used_techno"])
+    @project.usedtechno = @used_techno_values
     @project.save!
     redirect_to user_projects_path(current_user)
   end
@@ -44,6 +46,11 @@ class ProjectsController < ApplicationController
 
   def projecttype(project_type_values)
     resultat = project_type_values.join(",")
+    resultat[1..-1]
+  end
+
+  def usedtechno(used_techno_values)
+    resultat = used_techno_values.join(",")
     resultat[1..-1]
   end
 

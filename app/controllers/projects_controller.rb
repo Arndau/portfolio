@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
     @project_type_values = projecttype(params["project"]["project_type"])
     @project.project_type = @project_type_values
     @used_techno_values = usedtechno(params["project"]["used_techno"])
-    @project.usedtechno = @used_techno_values
+    @project.used_techno = @used_techno_values
     @project.save!
     redirect_to user_projects_path(current_user)
   end

@@ -1,7 +1,7 @@
 <div class="login">
 <% if user_signed_in? %>
   <%=link_to "离开会议(logout)", destroy_user_session_path, method: :delete %>
-  <%#=link_to "add a project", new_user_project_path %>
+  <%=link_to "add a project", new_user_project_path(:user_id) %>
 <% else %>
   <%=link_to "登录", new_user_session_path%>
 <% end %>

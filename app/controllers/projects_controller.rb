@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
     @project_type_values = projecttype(params["project"]["project_type"])
     @project.project_type = @project_type_values
     @project.save!
-    redirect_to userprojects_projects_path
+    redirect_to user_projects_path(current_user)
   end
 
   def edit
@@ -37,7 +37,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project = Project.find(params[:id])
     @project.destroy
-    redirect_to projects_path
+    redirect_to user_projects_path
   end
 
     private
@@ -48,6 +48,6 @@ class ProjectsController < ApplicationController
   end
 
     def project_params
-      params.require(:project).permit(:name, :project_type, :description, :date_of_publication, :used_techno, :link, :user_id, :image)
+      params.require(:project).permit(:name, :project_type, :description, :date_of_publication, :used_techno, :link, :user_id, :image )
     end
 end

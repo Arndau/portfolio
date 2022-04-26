@@ -1,12 +1,11 @@
 <div class="wrapper">
   <h1 class="header">报名</h1>
   <p class="headerText">Create a new project</p>
-<%= simple_form_for(@project) do |f| %>
 
+<%= simple_form_for ([:user, @project]) do |f| %>
   <div class="form-inputs">
     <%= f.input :name, label: "What's the name of this project ?"%>
     <%#= f.input :project_type, label: "What's the type of this project ?"%>
-
     <%= f.input :project_type, as: :check_boxes, collection: Project::COLLECTION %>
     <%= f.input :description, placeholder: "Max 140 characteres"%>
     <%= f.input :date_of_publication %>

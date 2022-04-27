@@ -10,14 +10,18 @@
             <p class="project-description"><%=project.description%></p>
           </div>
           <div class="bubles">
+          <div class = "type">
             <% @skills = project.project_type.split(",") %>
             <%= @skills.each do |skill|%>
-              <p class="project-type"><%=skill%></p>
+              <p class="project-type">#<%=skill%></p>
             <% end %>
-            <% @technos = project.used_techno.split(",")%>
-            <%= @technos.each do |techno|%>
-              <p class="project-used_techno"><%=techno%></p>
-            <% end %>
+          </div>
+            <div class = "techno">
+              <% @technos = project.used_techno.split(",")%>
+              <%= @technos.each do |techno|%>
+                <p class="project-used_techno">#<%=techno%></p>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>

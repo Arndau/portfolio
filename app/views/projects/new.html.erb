@@ -9,7 +9,7 @@
     <%= f.input :project_type, as: :check_boxes, collection: Project::COLLECTION %>
     <%= f.input :description, placeholder: "Max 140 characteres"%>
     <%= f.input :date_of_publication %>
-    <%= f.input :used_techno, collection: ['RoR', 'HTML5', 'SCSS', 'JavaScript', ], :multiple => true, :as => :check_boxes, required: false, include_blank: false %>
+    <%= f.input :used_techno, collection: ['RoR', 'HTML5', 'CSS', 'SCSS', 'JavaScript'], :multiple => true, :as => :check_boxes, required: false, include_blank: false %>
     <%= f.input :link, placeholder: "Copy/Past a link of your work in this field"%>
     <%= f.input :image, as: :file %>
   </div>

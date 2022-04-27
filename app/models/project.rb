@@ -9,7 +9,8 @@ class Project < ApplicationRecord
 
   has_one_attached :image
 
-  COLLECTION = ["E-commerce", "Showcase", "Market place"]
+  COLLECTION = ["E-commerce", "Showcase", "Marketplace", "Social network"]
+  TYPE = ["RoR", "JavaScript","HTML5","SCSS"]
 
   def project_image
     if image.attached?

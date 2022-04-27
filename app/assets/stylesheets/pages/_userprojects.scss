@@ -59,7 +59,19 @@
 }
 .bubles{
   position: absolute;
-  bottom: -10px;
+  bottom: -35px;
+  margin-left: -2px;
+}
+.type{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: -25px;
+}
+.techno{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .project-type{
   background-color: white;
@@ -71,6 +83,7 @@
   margin-top: -10;
   margin-left: 5px;
   font-weight: bold;
+  margin-right: -7px;
 }
 .project-used_techno{
   background-color: white;
@@ -82,6 +95,7 @@
   margin-top: -15px;
   margin-left: 5px;
   font-weight: bold;
+  margin-right: -7px;
 }
 .card-1:hover {
   transform: scale(0.9, 0.9);

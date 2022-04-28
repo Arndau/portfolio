@@ -1,27 +1,27 @@
 <%# <div class="login"> %>
   <%# <% if user_signed_in? %>
-    <%# <%=link_to "离开会议(logout)", destroy_user_session_path, method: :delete %>
+    <%=link_to "离开会议(logout)", destroy_user_session_path, method: :delete %>
     <%# <%=link_to "add a project", new_user_project_path(:user_id) %>
   <%# <% else %>
-    <%# <%=link_to "登录", new_user_session_path%>
+    <%=link_to "登录", new_user_session_path%>
   <%# <% end %>
 <%# </div> %>
 
-<div class="dropdown show">
-  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
     下拉式菜单
-  </a>
-
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
     <% if user_signed_in? %>
-    <%=link_to "离开会议(logout)", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
-    <%=link_to "add a project", new_user_project_path(:user_id), class:"dropdown-item"  %>
-  <% else %>
-    <%=link_to "登录", new_user_session_path, class:"dropdown-item" %>
-  <% end %>
-  </div>
+      <li><%=link_to "edit profile", edit_user_path(:user_id), class:"dropdown-item "  %></li>
+      <li><%=link_to "add a project", new_user_project_path(:user_id), class:"dropdown-item"  %></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><%=link_to "logout", destroy_user_session_path, method: :delete, class:"dropdown-item" %></li>
+    <% else %>
+      <li><%=link_to "登录", new_user_session_path, class:"dropdown-item" %></li>
+    <% end %>
+  </ul>
 </div>
-
 
 <div class = "card-container"></div>
   <div class="row d-flex justify-content-around">

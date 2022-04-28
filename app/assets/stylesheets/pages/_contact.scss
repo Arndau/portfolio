@@ -1,17 +1,34 @@
-.socials-link {
-  display: flex;
-  align-items: center;
+.contact {
   font-size: 24px;
+  max-width: fit-content;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0 35px 68px 0 rgba(136, 174, 222, 0.42), inset 0 -8px 16px 0 #b9d1f1;
+
 }
-.socials-link a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  padding: 0px 10px;
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
 }
-.socials-link a:hover {
-  opacity: 1;
+.space-evenly {
+  justify-content: space-evenly;
 }
-.contact{
-font-size: 18px;
+.flex-item {
+  padding: 5px;
+  width: 60px;
+  height: 50px;
+  margin: 5px;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.flex-item a{
+  color:black;
 }

@@ -1,1 +1,18 @@
-<h1>show</h1>
+
+
+
+<div class="wrapper">
+  <div class="contact">
+    <h1>CONTACT</h1>
+    <%=@user.email%>
+    <%# <%=@user.telepnone%>
+    <div class="socials-links">
+      <%= link_to "https://www.linkedin.com/in/arnaud-le-garrec-3260a317b/", :target => "_blank" do%>
+        <i class="fab fa-linkedin"></i>
+      <% end %>
+      <%= link_to "https://github.com/Arndau", :target => "_blank" do%>
+        <i class="fab fa-github"></i>
+      <% end %>
+    </div>
+  </div>
+</div>

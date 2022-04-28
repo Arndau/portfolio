@@ -17,6 +17,17 @@
        padding: 20px;
        flex-direction:column;
  }
+ .dropdown{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+ }
+ .btn-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  border-radius: 10px;
+}
  .login a{
    color: white;
    font-family:'Noto Sans SC', sans-serif;

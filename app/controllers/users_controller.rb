@@ -10,8 +10,16 @@ class UsersController < ApplicationController
   end
 
   def edit
-
+    @user = User.find(params[:id])
   end
+
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    # Will raise ActiveModel::ForbiddenAttributesError
+    redirect_to root_path(@user)
+  end
+
   private
 
   def user_params

@@ -3,12 +3,36 @@
   <%=@user.email%>
   <%# <%=@user.telepnone%>
 
-  <ul class="flex-container space-evenly">
+  <%# <ul class="flex-container space-evenly">
     <li class="flex-item"> <%= link_to "https://www.linkedin.com/in/arnaud-le-garrec-3260a317b/", :target => "_blank" do%>
-      <i class="fab fa-linkedin"></i>
+      <%# <i class="fab fa-linkedin"></i>
     <% end %></li>
-    <li class="flex-item"> <%= link_to "https://github.com/Arndau", :target => "_blank" do%>
-      <i class="fab fa-github"></i>
-    <% end %></li>
-  </ul>
+    <%# <li class="flex-item"> <%= link_to "https://github.com/Arndau", :target => "_blank" do%>
+      <%# <i class="fab fa-github"></i> %>
+    <%# <% end %></li>
+  <%# </ul>  %>
+
+  <div class="icones space-evenly">
+      <%# <div class="icon facebook">
+        <div class="tooltip">Facebook</div>
+        <span><i class="fab fa-facebook-f"></i></span>
+      </div> %>
+
+      <div class="icon twitter">
+        <div class="tooltip">linkedin</div>
+        <%= link_to "https://www.linkedin.com/in/arnaud-le-garrec-3260a317b/", :target => "_blank" do%>
+          <span><i class="fab fa-linkedin"></i></span>
+        <% end %>
+      </div>
+  <div class="icon github">
+        <div class="tooltip">github</div>
+        <%= link_to "https://github.com/Arndau", :target => "_blank" do%>
+          <span><i class="fab fa-github"></i></span>
+        <% end %>
+      </div>
+  <%# <div class="icon youtube">
+        <div class="tooltip">YouTube</div>
+        <span><i class="fab fa-youtube"></i></span>
+      </div>
+  </div> %>
 </div>

@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   resources :users do
     resources :projects
   end
-  resources :contact, only: [:create]
+  resources :contacts, only: [:new, :create]
 end

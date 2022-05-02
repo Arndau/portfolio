@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <h1>CONTACT</h1>
+  <%= simple_form_for @contact do |f| %>
+    <div class="form-inputs">
+      <%= f.label :name %><br>
+      <%= f.text_field :name, required: true %>
+      <br>
+       <%= f.label :email %><br>
+       <%= f.email_field :email, required: true %>
+      <br>
+       <%= f.label :message %><br>
+      <div class="textmailfield">
+       <%= f.text_area :message, required: true, as: :text , placeholder: "What brings you to me ?" %>
+      </div>
+      <div class="hidden">
+        <%= f.label :nickname %><br>
+        <%= f.text_field :nickname, hint: 'leave this field blank' %>
+      </div>
+    </div>
+    <div class="form-actions">
+      <%= f.button :submit, "Send Mail", class:"submitButton" %>
+     </div>
+  <% end %>
+  <div class="icones space-evenly">
+      <div class="icon twitter">
+        <div class="tooltip">linkedin</div>
+        <%= link_to "https://www.linkedin.com/in/arnaud-le-garrec-3260a317b/", :target => "_blank" do%>
+          <span><i class="fab fa-linkedin"></i></span>
+        <% end %>
+      </div>
+  <div class="icon github">
+        <div class="tooltip">github</div>
+        <%= link_to "https://github.com/Arndau", :target => "_blank" do%>
+          <span><i class="fab fa-github"></i></span>
+        <% end %>
+      </div>
+</div>

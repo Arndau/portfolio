@@ -1,5 +1,7 @@
 <div class="wrapper">
-  <h1>CONTACT</h1>
+  <div class="formtitle">
+    <h1>CONTACT</h1>
+  </div>
   <%= simple_form_for @contact do |f| %>
     <div class="form-inputs">
       <%= f.label :name %><br>
@@ -9,9 +11,10 @@
        <%= f.email_field :email, required: true %>
       <br>
        <%= f.label :message %><br>
-      <div class="textmailfield">
-       <%= f.text_area :message, required: true, as: :text , placeholder: "What brings you to me ?" %>
-      </div>
+      <%# <div class="textmailfield"> %>
+        <%= f.text_area :message, rows: 8, cols: 47, required: true,
+            placeholder: "Send me a message"%></br>
+      <%# </div> %>
       <div class="hidden">
         <%= f.label :nickname %><br>
         <%= f.text_field :nickname, hint: 'leave this field blank' %>

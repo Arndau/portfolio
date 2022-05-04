@@ -7,7 +7,7 @@
           <%= cl_image_tag project.project_image, style:" width: 100%; height: 100%; object-fit: cover;  opacity: 0.5; border-radius: 10px; filter: blur(1px) "%>
           <div class="card-content-centered">
             <h1><%=project.name%><%=project.user_id %></h1>
-            <h3><%=link_to "SEE WEBSITE", "https://www.poner.io/", :target => "_blank" %></h3>
+            <h3> blabla </h3>
             <p class="project-description"><%=project.description%></p>
           </div>
           <div class="bubles">
@@ -17,12 +17,12 @@
               <p class="project-type">#<%=skill%></p>
             <% end %>
           </div>
-            <div class = "techno">
-              <% @technos = project.used_techno.split(",")%>
-              <% @technos.each do |techno|%>
-                <p class="project-used_techno">#<%=techno%></p>
-              <% end %>
-            </div>
+          <div class = "techno">
+            <% @technos = project.used_techno.split(",")%>
+            <% @technos.each do |techno|%>
+              <p class="project-used_techno">#<%=techno%></p>
+            <% end %>
+          </div>
           </div>
         <% end %>
         </div>

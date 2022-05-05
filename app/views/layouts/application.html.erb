@@ -13,10 +13,18 @@
   </head>
 
   <body>
-    <%= render 'shared/dropdown' %>
-    <%= render 'shared/flashes' %>
+    <div class="backbtn">
+      <% unless controller_name == 'users' && action_name == 'index' %>
+        <%= link_to root_path, class:"navbar-back" do %>
+          <i class="fa-solid fa-circle-left"> BACK</i>
+        <% end %>
+      <% end %>
+    </div>
 
-    <%= yield %>
+      <%= render 'shared/dropdown' %>
+      <%= render 'shared/flashes' %>
 
+      <%= yield %>
   </body>
+
 </html>

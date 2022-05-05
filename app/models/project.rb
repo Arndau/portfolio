@@ -16,7 +16,7 @@ class Project < ApplicationRecord
     if image.attached?
       image.key
     else
-      "default_profile_pic_xl837y"
+      "504708-200_yey0vr"
     end
   end
 

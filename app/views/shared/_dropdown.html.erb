@@ -1,15 +1,15 @@
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-    下拉式菜单
+    MENU
   </button>
   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
     <% if user_signed_in? %>
-      <li><%=link_to "edit profile",  edit_user_registration_path(current_user.id), class:"dropdown-item "  %></li>
-      <li><%=link_to "add a project", new_user_project_path(:user_id), class:"dropdown-item"  %></li>
+      <li><%=link_to "Edit profile",  edit_user_registration_path(current_user.id), class:"dropdown-item "  %></li>
+      <li><%=link_to "Add a project", new_user_project_path(:user_id), class:"dropdown-item"  %></li>
       <li><hr class="dropdown-divider"></li>
-      <li><%=link_to "logout", destroy_user_session_path, method: :delete, class:"dropdown-item" %></li>
+      <li><%=link_to "Logout", destroy_user_session_path, method: :delete, class:"dropdown-item" %></li>
     <% else %>
-      <li><%=link_to "登录", new_user_session_path, class:"dropdown-item" %></li>
+      <li><%=link_to "Connexion", new_user_session_path, class:"dropdown-item" %></li>
     <% end %>
   </ul>
 </div>
